@@ -201,7 +201,7 @@ function User1() {
                                     </Heading>
                                     <br />
                                     <Text pt="2" fontSize="2xl" as='i'>
-                                        (70+70)/2 = 70
+                                        (70 + 70) / 2 = 70
                                     </Text>
                                 </Box>
                                 <Box>
@@ -210,7 +210,7 @@ function User1() {
                                     </Heading>
                                     <br />
                                     <Text pt="2" fontSize="2xl" as='i'>
-                                        (10+10+10+10+10+0+20+0+0+0+10+10)/12 = 7.5
+                                        (10 + 10 + 10 + 10 + 10 + 0 + 20 + 0 + 0 + 0 + 10 + 10) / 12 = 7.5
                                     </Text>
                                     <Container maxW="40%" my={6}>
                                         <PolarArea data={data2} />
@@ -222,7 +222,7 @@ function User1() {
                                     </Heading>
                                     <br />
                                     <Text pt="2" fontSize="2xl" as='i'>
-                                        (9.75 + 8 + 8.25)= 26
+                                        (9.75 + 8 + 8.25) = 26
                                     </Text>
                                 </Box>
                             </Stack>

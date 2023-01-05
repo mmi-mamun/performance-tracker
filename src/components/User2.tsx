@@ -1,36 +1,28 @@
 import React from 'react'
-import { Container, Heading } from "@chakra-ui/react";
 import {
-    ArcElement,
-    BarElement,
-    CategoryScale,
-    Chart as ChartJS,
-    Legend,
-    LinearScale,
-    RadialLinearScale,
-    Tooltip,
-} from "chart.js";
+    Box, Card, CardBody, CardHeader, Container, Heading, Stack, StackDivider, Table, TableContainer, Tbody, Td, Text, Th, Thead, Tr,
+} from "@chakra-ui/react";
 import { Bar, PolarArea } from "react-chartjs-2";
-ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 
 function User2() {
 
+    // data for apply start
     const data = {
         datasets: [
             {
                 label: "Application number",
                 data: [
-                    { x: "20/12/2022", y: 2 },
-                    { x: "21/12/2022", y: 4 },
+                    { x: "20/12/2022", y: 6 },
+                    { x: "21/12/2022", y: 11 },
                     { x: "22/12/2022", y: 7 },
                     { x: "23/12/2022", y: 0 },
                     { x: "24/12/2022", y: 0 },
                     { x: "25/12/2022", y: 7 },
-                    { x: "26/12/2022", y: 5 },
+                    { x: "26/12/2022", y: 10 },
                     { x: "27/12/2022", y: 7 },
                     { x: "28/12/2022", y: 8 },
-                    { x: "29/12/2022", y: 6 },
+                    { x: "29/12/2022", y: 10 },
                     { x: "30/12/2022", y: 7 },
                     { x: "31/12/2022", y: 3 },
                 ],
@@ -56,15 +48,190 @@ function User2() {
             }
         ]
     };
+    // data for apply end
+
+    // data for average score start 
+    const data2 = {
+        labels: [
+            "20/12/2022",
+            "21/12/2022",
+            "22/12/2022",
+            "23/12/2022",
+            "24/12/2022",
+            "25/12/2022",
+            "26/12/2022",
+            "27/12/2022",
+            "28/12/2022",
+            "29/12/2022",
+            "30/12/2022",
+            "31/12/2022",
+        ],
+        datasets: [
+            {
+                label: "# of Applied",
+                data: [6, 11, 7, 0, 0, 7, 10, 7, 8, 10, 7, 3],
+                backgroundColor: [
+                    "rgba(255, 99, 132, 0.5)",
+                    "rgba(54, 162, 235, 0.5)",
+                    "rgba(255, 206, 86, 0.5)",
+                    "rgba(75, 192, 192, 0.5)",
+                    "rgba(153, 102, 255, 0.5)",
+                    "rgba(255, 159, 64, 0.5)",
+                    "rgba(166, 110, 64, 0.5)",
+                ],
+                borderWidth: 1,
+            },
+        ],
+    };
+    // data for average score end 
     return (
-        <div>
-            <Heading textTransform="uppercase" pb={6} textAlign="center">
-                DAY WISE APPLICATION NUMBER
-            </Heading>
-            <Container mb={6} maxW="80%">
-                <Bar data={data}></Bar>
-            </Container>
-        </div>
+        <section>
+            {/* Interview details  */}
+            <div>
+                <Heading textTransform="uppercase" pt={3} pb={12} textAlign="center" color="green">
+                    *Muzahidul Islam Mamun*
+                </Heading>
+                <Heading textTransform="uppercase" py={3} textAlign="center">
+                    MARKS OF ALL MOCK TESTS
+                </Heading>
+                <Container mb={6} maxW="80%" py={6}>
+                    <TableContainer>
+                        <Table>
+                            <Thead>
+                                <Tr>
+                                    <Th>S/I</Th>
+                                    <Th>Interviewer Name</Th>
+                                    <Th>Get Number</Th>
+                                </Tr>
+                            </Thead>
+                            <Tbody>
+                                <Tr>
+                                    <Td>01</Td>
+                                    <Td>MD. ASHRAFUL ISLAM</Td>
+                                    <Td>67 out of 70</Td>
+                                </Tr>
+                                <Tr>
+                                    <Td>02</Td>
+                                    <Td>MD. MIRZA ADNAN</Td>
+                                    <Td>66 out of 70</Td>
+                                </Tr>
+                            </Tbody>
+                        </Table>
+                    </TableContainer>
+                </Container>
+            </div>
+
+            {/* apply data  */}
+            <div>
+                <Heading textTransform="uppercase" pb={6} textAlign="center">
+                    DAY WISE APPLIED NUMBER
+                </Heading>
+                <Container mb={6} maxW="80%">
+                    <Bar data={data}></Bar>
+                </Container>
+            </div>
+
+            {/* All marks for each projects */}
+            <div>
+                <Heading textTransform="uppercase" py={6} textAlign="center">
+                    All mark of each project
+                </Heading>
+                <Container maxW="80%" py={6}>
+                    <TableContainer>
+                        <Table>
+                            <Thead>
+                                <Tr>
+                                    <Th>S/I</Th>
+                                    <Th>Project Name</Th>
+                                    <Th>Getting Mark From Ashraful</Th>
+                                    <Th>Getting Mark From Mirza Adnan</Th>
+                                    <Th>Total Mark</Th>
+                                    <Th>Average Mark</Th>
+                                    <Th>Feedback</Th>
+                                </Tr>
+                            </Thead>
+                            <Tbody>
+                                <Tr>
+                                    <Td textAlign="center">01</Td>
+                                    <Td textAlign="center">Mobile Planet</Td>
+                                    <Td textAlign="center">9.5/10</Td>
+                                    <Td textAlign="center">7/10</Td>
+                                    <Td textAlign="center">16.5/20</Td>
+                                    <Td textAlign="center">8.25/10</Td>
+                                    <Td textAlign="center">Pending...</Td>
+                                </Tr>
+                                <Tr>
+                                    <Td textAlign="center">02</Td>
+                                    <Td textAlign="center">Skill Learning</Td>
+                                    <Td textAlign="center">9/10</Td>
+                                    <Td textAlign="center">7/10</Td>
+                                    <Td textAlign="center">16/20</Td>
+                                    <Td textAlign="center">8/10</Td>
+                                    <Td textAlign="center">Pending...</Td>
+                                </Tr>
+                                <Tr>
+                                    <Td textAlign="center">03</Td>
+                                    <Td textAlign="center">Personal Dental Care</Td>
+                                    <Td textAlign="center">9.5/10</Td>
+                                    <Td textAlign="center">10/10</Td>
+                                    <Td textAlign="center">19.5/20</Td>
+                                    <Td textAlign="center">9.75/10</Td>
+                                    <Td textAlign="center">Pending...</Td>
+                                </Tr>
+                            </Tbody>
+                        </Table>
+                    </TableContainer>
+                </Container>
+
+
+                {/* average score */}
+                <Heading textTransform="uppercase" mt={12} py={6} textAlign="center">
+                    Average score
+                </Heading>
+                <Container maxW="80%" py={6}>
+                    <Card>
+                        {/* <CardHeader>
+                            <Heading size="md">Name: Adnan Mirza</Heading>
+                        </CardHeader> */}
+
+                        <CardBody>
+                            <Stack divider={<StackDivider />} spacing="4">
+                                <Box>
+                                    <Heading size="xs" textTransform="uppercase" fontSize='3xl' as='b'>
+                                        Mock Test (Out of 70)
+                                    </Heading>
+                                    <br />
+                                    <Text pt="2" fontSize="2xl" as='i'>
+                                        (67 + 66) / 2 = 66.5
+                                    </Text>
+                                </Box>
+                                <Box>
+                                    <Heading size="xs" textTransform="uppercase" fontSize='3xl' as='b'>
+                                        Apply job (Per day)
+                                    </Heading>
+                                    <br />
+                                    <Text pt="2" fontSize="2xl" as='i'>
+                                        (6 + 11 + 7 + 0 + 0 + 7 + 10 + 7 + 8 + 10 + 7 + 3) / 12 = 6.3
+                                    </Text>
+                                    <Container maxW="40%" my={6}>
+                                        <PolarArea data={data2} />
+                                    </Container>
+                                </Box>
+                                <Box>
+                                    <Heading size="xs" textTransform="uppercase" fontSize='3xl' as='b'>
+                                        Project Marks (Out of 30)
+                                    </Heading>
+                                    <br />
+                                    <Text pt="2" fontSize="2xl" as='i'>
+                                        (8.25 + 8 + 9.75) = 26
+                                    </Text>
+                                </Box>
+                            </Stack>
+                        </CardBody>
+                    </Card>
+                </Container>
+            </div>
+        </section>
     )
 }
 
