@@ -1,4 +1,5 @@
 import { Container, Image } from "@chakra-ui/react";
+import banner from '../assets/images/banner.jpg'
 export default function Banner() {
     return (
         <>
@@ -6,7 +7,7 @@ export default function Banner() {
                 <Image
                     boxSize="100%"
                     objectFit="cover"
-                    src="https://img.freepik.com/premium-vector/flat-database-programmer-with-programming-languages-css-html-it-ui-developing-coding-concept-outline-design-style-minimal-illustration-landing-page-web-banner-infographics-hero-images_269730-1888.jpg?w=2000"
+                    src={banner}
                     alt="Banner"
                 />
             </Container>

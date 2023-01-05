@@ -41,7 +41,7 @@ export default function Footer() {
                 >
                     <Flex justifyContent="flex-start" alignItems="center">
                         <EmailIcon boxSize={4} color="#fff" mr={2} mb={-1} />
-                        <Text color="#fff">admin@info.com</Text>
+                        <Text color="#fff">mmi.mamunn@gmail.com</Text>
                     </Flex>
                     <Flex justifyContent="flex-start" alignItems="center"></Flex>
                 </Flex>
