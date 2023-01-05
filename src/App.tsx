@@ -3,9 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import { ChakraProvider } from '@chakra-ui/react';
 import Banner from './components/Banner';
-import NameTabs from './components/NameTabs';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import NameTabs from './components/NameTabs';
 
 function App() {
   return (

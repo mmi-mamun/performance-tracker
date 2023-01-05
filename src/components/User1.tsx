@@ -1,8 +1,34 @@
-import React from 'react'
 import {
-    Box, Card, CardBody, CardHeader, Container, Heading, Stack, StackDivider, Table, TableContainer, Tbody, Td, Text, Th, Thead, Tr,
+    Box,
+    Card,
+    CardBody,
+    CardHeader,
+    Container,
+    Heading,
+    Stack,
+    StackDivider,
+    Table,
+    TableContainer,
+    Tbody,
+    Td,
+    Text,
+    Th,
+    Thead,
+    Tr,
 } from "@chakra-ui/react";
+import {
+    ArcElement,
+    BarElement,
+    CategoryScale,
+    Chart as ChartJS,
+    Legend,
+    LinearScale,
+    RadialLinearScale,
+    Tooltip,
+} from "chart.js";
 import { Bar, PolarArea } from "react-chartjs-2";
+ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
+ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
 
 function User1() {
     // data for apply start
@@ -106,12 +132,12 @@ function User1() {
                             <Tbody>
                                 <Tr>
                                     <Td>01</Td>
-                                    <Td>MD. ASHRAFUL ISLAM</Td>
+                                    <Td>MD. MUZAHIDUL ISLAM MAMUN</Td>
                                     <Td>70 out of 70</Td>
                                 </Tr>
                                 <Tr>
                                     <Td>02</Td>
-                                    <Td>MD. MUZAHIDUL ISLAM MAMUN</Td>
+                                    <Td>MD. ASHRAFUL ISLAM</Td>
                                     <Td>70 out of 70</Td>
                                 </Tr>
                             </Tbody>

@@ -1,8 +1,34 @@
-import React from 'react'
 import {
-    Box, Card, CardBody, CardHeader, Container, Heading, Stack, StackDivider, Table, TableContainer, Tbody, Td, Text, Th, Thead, Tr,
+    Box,
+    Card,
+    CardBody,
+    CardHeader,
+    Container,
+    Heading,
+    Stack,
+    StackDivider,
+    Table,
+    TableContainer,
+    Tbody,
+    Td,
+    Text,
+    Th,
+    Thead,
+    Tr,
 } from "@chakra-ui/react";
+import {
+    ArcElement,
+    BarElement,
+    CategoryScale,
+    Chart as ChartJS,
+    Legend,
+    LinearScale,
+    RadialLinearScale,
+    Tooltip,
+} from "chart.js";
 import { Bar, PolarArea } from "react-chartjs-2";
+ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
+ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
 
 function User3() {
     // data for apply start
@@ -106,7 +132,7 @@ function User3() {
                             <Tbody>
                                 <Tr>
                                     <Td>01</Td>
-                                    <Td>MD. ASHRAFUL ISLAM</Td>
+                                    <Td>MD. MIRZA ADNAN</Td>
                                     <Td>70 out of 70</Td>
                                 </Tr>
                                 <Tr>
@@ -154,7 +180,7 @@ function User3() {
                                     <Td textAlign="center">01</Td>
                                     <Td textAlign="center">House of CSE</Td>
                                     <Td textAlign="center">10/10</Td>
-                                    <Td textAlign="center">09/10</Td>
+                                    <Td textAlign="center">9/10</Td>
                                     <Td textAlign="center">19/20</Td>
                                     <Td textAlign="center">9.5/10</Td>
                                     <Td textAlign="center">Pending...</Td>
