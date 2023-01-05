@@ -115,7 +115,7 @@ function User2() {
             {/* Interview details  */}
             <div>
                 <Heading textTransform="uppercase" pt={3} pb={12} textAlign="center" color="green">
-                    *Muzahidul Islam Mamun*
+                    *MD. Muzahidul Islam Mamun*
                 </Heading>
                 <Heading textTransform="uppercase" py={3} textAlign="center">
                     MARKS OF ALL MOCK TESTS

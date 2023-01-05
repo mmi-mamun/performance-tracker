@@ -17,9 +17,9 @@ export default function NameTabs() {
             <Container centerContent maxW="100%" mt={8}>
                 <Tabs isFitted variant="enclosed" width="80%">
                     <TabList mb="1em" bgGradient="radial(purple.300, yellow.400, green.200)" >
-                        <Tab fontSize='3xl' as='i'>Mirza Adnan</Tab>
-                        <Tab fontSize='3xl' as='i'>Muzahidul Islam Mamun</Tab>
-                        <Tab fontSize='3xl' as='i'>Ashraful Islam</Tab>
+                        <Tab fontSize='2xl' as='i'>Mirza Adnan</Tab>
+                        <Tab fontSize='2xl' as='i'>M MI Mamun</Tab>
+                        <Tab fontSize='2xl' as='i'>Ashraful Islam</Tab>
                     </TabList>
                     <TabPanels>
                         <TabPanel>
